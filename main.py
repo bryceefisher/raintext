@@ -5,9 +5,9 @@ from twilio.rest import Client
 
 # Constants update with your info
 OWM_ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall"
-API_KEY = "**YOUR OPEN WEATHER API KEY"
-ACCOUNT_SID = "TWILIO SID"
-AUTH_TOKEN = 'TWILIO AUTH TOKEN'
+API_KEY = "**YOUR OPEN WEATHER API KEY**"
+ACCOUNT_SID = "**TWILIO SID**"
+AUTH_TOKEN = '**TWILIO AUTH TOKEN**'
 CLIENT = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 weather_params = {
