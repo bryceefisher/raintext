@@ -5,14 +5,14 @@ from twilio.rest import Client
 
 # Constants update with your info
 OWM_ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall"
-API_KEY = "eec3d79173a3898efcc286db6eab7e45"
-ACCOUNT_SID = "AC2ec366d5911842c63087570e609047b7"
-AUTH_TOKEN = 'cb1088f9034f187cfc2251e82cca1466'
+API_KEY = "**YOUR OPEN WEATHER API KEY"
+ACCOUNT_SID = "TWILIO SID"
+AUTH_TOKEN = 'TWILIO AUTH TOKEN'
 CLIENT = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 weather_params = {
-    "lat": 44.052071,
-    "lon": -123.086754,
+    "lat": **YOUR LAT**,
+    "lon": **YOUR LONG**,
     "appid": API_KEY,
     "units": "imperial",
     "exclude": "current,alerts,daily,minutely"
@@ -27,8 +27,8 @@ hourly_json = json.dumps(hourly_data, indent=4)
 def rain_today():
     message = CLIENT.messages.create(
         body="It's going to rain today. Don't forget your umbrella",
-        from_='+18149294372',
-        to='+13609134165'
+        from_='**TWILIO NUMBER**',
+        to='**NUMBER YOU WANT TO SEND TO**'
     )
 
 
